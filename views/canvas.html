@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>canvas</title>
+		<style>
+			*{
+				margin:0;
+				padding: 0;
+			}
+			body,html{
+				display: flex;
+				flex-direction:row;
+				flex-direction:column;
+				justify-content:center;
+				align-items:center;
+				width:100%;
+				height:100%;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<canvas id='canvas' width='400' height='400'>
+			<span>您的浏览器暂时不支持查看canvas请更换高级浏览器</span>
+		</canvas>
+
+
+		<script>
+			var canvas = document.querySelector('#canvas')
+			var ctx = canvas.getContext('2d');
+			ctx.beginPath();
+
+			// ctx.strokeStyle='blue'
+			// ctx.moveTo(10,30)
+			// ctx.lineTo(360,200);
+			// ctx.lineTo(10,200)
+			ctx.textBaseline = "middle";
+			ctx.font="italic bold 40px 微软雅黑 ";
+			ctx.fillText('this is ?',50,50)
+
+			ctx.closePath()
+			ctx.stroke();
+			
+
+			
+
+		</script>
+	</body>
+</html>

@@ -1,0 +1,16 @@
+module.exports=function(app){
+    app.post('/server/userInfo',(req,res)=>{
+        if(!req.session.userInfo){
+            res.json({
+                success:false,
+                msg:'用户未登录'
+            })
+        }else{
+            res.json({
+                success:true,
+                result:req.session.userInfo,
+                msg:"用户已登录"
+            })
+        }
+    })
+}
